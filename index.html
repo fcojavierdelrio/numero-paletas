@@ -89,33 +89,5 @@
             // Aquí puedes enviar los datos al servidor o procesarlos como prefieras.
         });
     </script>
-    // https://mockapi.io/projects/676d3d240e299dd2ddfee42d#
-        const apiUrl = 'https://5f92d0cc3088df0016c929ad.mockapi.io/paletas';
-
-        document.getElementById('paletaForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const numeroPaletas = document.getElementById('numeroPaletas').value;
-
-            // Enviar los datos a MockAPI
-            fetch(apiUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    numeroPaletas: numeroPaletas,
-                    fecha: new Date().toISOString(),
-                })
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert('Datos almacenados exitosamente');
-                console.log('Respuesta de MockAPI:', data);
-            })
-            .catch(error => {
-                alert('Error al almacenar los datos: ' + error);
-            });
-        });
-    </script>
 </body>
 </html>
