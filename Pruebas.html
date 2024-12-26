@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número de Paletas</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: #333;
+        }
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 300px;
+            height: auto;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4facfe;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #00aaff;
+        }
+        footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logotipo -->
+        <div class="logo">
+            <img src="mercadona-logo.png" alt="Logotipo de Mercadona">
+        </div>
+        <h1>Ingrese el Número de Paletas</h1>
+        <form id="paletaForm">
+            <input type="number" id="numeroPaletas" placeholder="Escriba el número de paletas" required>
+            <button type="submit">Enviar</button>
+        </form>
+        <footer>
+            &copy; 2024 Mercadona Logística
+        </footer>
+    </div>
+    <script>
+        document.getElementById('paletaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const numeroPaletas = document.getElementById('numeroPaletas').value;
+            alert(`Número de paletas ingresado: ${numeroPaletas}`);
+            // Aquí puedes enviar los datos al servidor o procesarlos como prefieras.
+        });
+    </script>
+</body>
+</html>
